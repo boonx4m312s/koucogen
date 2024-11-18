@@ -1,4 +1,4 @@
-const button = document.querySelector('input[type="button"]');
+const button = document.getElementById('button1');
 const paragraph = document.querySelector("p");
 
 button.addEventListener("click", calculation);
