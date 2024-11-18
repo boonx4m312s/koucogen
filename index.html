@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>私の最初のGitHub Pages</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>こんにちは、世界！</h1>
-  <p>これは私の最初のGitHub Pagesです。</p>
+  <head>
+    <base target="_top">
+    <!-- Use a templated HTML printing scriptlet to import common stylesheet -->
+  </head>
+  <body>
+    <h1>勾股弦の計算
+    </h1>
+    <form>
+      <input type="text" id="kou" name="kou" required minlength="4" maxlength="8" size="10" />
+      <input type="text" id="co" name="co" required minlength="4" maxlength="8" size="10" />
+      <input type="text" id="gen" name="gen" required minlength="4" maxlength="8" size="10" />
+      <input type="button" value="マシンを起動" />  
+  </form>
+  <p>マシンが停止しています。</p>
+
   <script src="script.js"></script>
-</body>
+  </body>
 </html>
