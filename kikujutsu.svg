@@ -24,13 +24,13 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1.4142136"
-     inkscape:cx="464.9227"
-     inkscape:cy="292.38865"
-     inkscape:window-width="1920"
-     inkscape:window-height="1009"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
+     inkscape:cx="465.27625"
+     inkscape:cy="233.34523"
+     inkscape:window-width="1409"
+     inkscape:window-height="1032"
+     inkscape:window-x="130"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
      id="defs1">
@@ -80,19 +80,135 @@
        id="path7" />
     <text
        xml:space="preserve"
-       transform="matrix(0.26458333,0,0,0.26458333,3.0659611,51.421183)"
-       id="text15"
-       style="white-space:pre;shape-inside:url(#rect15);display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-dasharray:3.99999, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        x="93.406746"
        y="177.38594"
        id="text18"><tspan
          sodipodi:role="line"
          id="tspan18"
-         style="stroke-width:0.497954"
-         x="93.406746"
-         y="177.38594">殳</tspan></text>
+         style="stroke-width:0.497954;fill:#000000;fill-opacity:1;stroke:none"
+         x="0"
+         y="0">殳</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="130.04118"
+       y="169.34531"
+       id="text18-3"><tspan
+         sodipodi:role="line"
+         id="tspan18-6"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
+         x="130.04118"
+         y="169.34531">殳2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="55.438206"
+       y="169.23572"
+       id="text18-2"><tspan
+         sodipodi:role="line"
+         id="tspan18-51"
+         style="stroke-width:0.497954;stroke:none;fill:#000000;fill-opacity:1"
+         x="55.438206"
+         y="169.23572">殳1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="131.39619"
+       y="102.52806"
+       id="text18-7"><tspan
+         sodipodi:role="line"
+         id="tspan18-7"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
+         x="131.39619"
+         y="102.52806">小殳</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="58.134937"
+       y="99.812523"
+       id="text18-0"><tspan
+         sodipodi:role="line"
+         id="tspan18-5"
+         style="stroke-width:0.497954;stroke:none;fill:#000000;fill-opacity:1"
+         x="0"
+         y="0">玄</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="115.30312"
+       y="84.917053"
+       id="text18-0-9"><tspan
+         sodipodi:role="line"
+         id="tspan18-5-8"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-dasharray:none"
+         x="115.30312"
+         y="84.917053">短玄</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="53.905941"
+       y="120.83807"
+       id="text18-0-6"><tspan
+         sodipodi:role="line"
+         id="tspan18-5-9"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
+         x="53.905941"
+         y="120.83807">長玄</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="163.75893"
+       y="118.74986"
+       id="text18-0-8"><tspan
+         sodipodi:role="line"
+         id="tspan18-5-3"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
+         x="163.75893"
+         y="118.74986">勾</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="191.27037"
+       y="104.7723"
+       id="text18-0-8-2"><tspan
+         sodipodi:role="line"
+         id="tspan18-5-3-9"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
+         x="191.27037"
+         y="104.7723">補玄</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="136.98254"
+       y="129.4359"
+       id="text18-0-8-7"><tspan
+         sodipodi:role="line"
+         id="tspan18-5-3-7"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
+         x="136.98254"
+         y="129.4359">中勾</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="151.98598"
+       y="79.434608"
+       id="text18-0-8-7-8"><tspan
+         sodipodi:role="line"
+         id="tspan18-5-3-7-49"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
+         x="151.98598"
+         y="79.434608">小中勾</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="97.879776"
+       y="137.97455"
+       id="text18-0-8-7-6"><tspan
+         sodipodi:role="line"
+         id="tspan18-5-3-7-4"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
+         x="97.879776"
+         y="137.97455">欠勾</tspan></text>
   </g>
 </svg>

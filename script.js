@@ -45,7 +45,8 @@ function calculation() {
 
       paragraph.textContent = `計算は${g} ${h} ${i}`;
 
-
+      const pa = document.getElementById("text18");
+      pa.textContent = "変更後のテキスト";   
     }else{
       paragraph.textContent ="エラー";
     }
