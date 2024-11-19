@@ -44,6 +44,8 @@ function calculation() {
       i = gen*(kou/co); //補玄
 
       paragraph.textContent = `計算は${g} ${h} ${i}`;
+
+
     }else{
       paragraph.textContent ="エラー";
     }
