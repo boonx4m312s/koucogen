@@ -45,8 +45,16 @@ function calculation() {
 
       paragraph.textContent = `計算は${g} ${h} ${i}`;
 
-      const pa = document.getElementById("text18");
-      pa.textContent = "変更後のテキスト";   
+      var pa = document.getElementById("svg_txt_co");
+      pa.textContent = `殳 ${co}`;
+
+      pa = document.getElementById("svg_txt_co1");
+      pa.textContent = `殳1 ${d}`;
+
+      pa = document.getElementById("svg_txt_co2");
+      pa.textContent = `殳1 ${e}`;
+
+
     }else{
       paragraph.textContent ="エラー";
     }
