@@ -52,7 +52,7 @@ function calculation() {
       pa.textContent = `殳1 ${d}`;
 
       pa = document.getElementById("svg_txt_co2");
-      pa.textContent = `殳1 ${e}`;
+      pa.textContent = `殳2 ${e}`;
 
 
     }else{

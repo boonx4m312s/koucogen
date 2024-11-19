@@ -3,8 +3,8 @@
 
 <svg
    width="872"
-   height="486"
-   viewBox="0 0 230.71667 128.5875"
+   height="500"
+   viewBox="0 0 230.71667 132.29167"
    version="1.1"
    id="svg1"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
@@ -25,11 +25,11 @@
      inkscape:document-units="mm"
      inkscape:zoom="1.4142136"
      inkscape:cx="465.27625"
-     inkscape:cy="233.34523"
+     inkscape:cy="742.4621"
      inkscape:window-width="1409"
      inkscape:window-height="1032"
-     inkscape:window-x="130"
-     inkscape:window-y="0"
+     inkscape:window-x="621"
+     inkscape:window-y="319"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
@@ -86,9 +86,9 @@
        id="text18"><tspan
          sodipodi:role="line"
          id="tspan18"
-         style="stroke-width:0.497954;fill:#000000;fill-opacity:1;stroke:none"
-         x="0"
-         y="0">殳</tspan></text>
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
+         x="93.406746"
+         y="177.38594">殳</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -108,7 +108,7 @@
        id="text18-2"><tspan
          sodipodi:role="line"
          id="tspan18-51"
-         style="stroke-width:0.497954;stroke:none;fill:#000000;fill-opacity:1"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
          x="55.438206"
          y="169.23572">殳1</tspan></text>
     <text
@@ -130,9 +130,9 @@
        id="text18-0"><tspan
          sodipodi:role="line"
          id="tspan18-5"
-         style="stroke-width:0.497954;stroke:none;fill:#000000;fill-opacity:1"
-         x="0"
-         y="0">玄</tspan></text>
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
+         x="58.134937"
+         y="99.812523">玄</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
