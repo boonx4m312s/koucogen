@@ -1,6 +1,4 @@
 const button = document.getElementById('button1');
-const paragraph = document.querySelector("p");
-
 button.addEventListener("click", calculation);
 
 function calculation() {
@@ -25,12 +23,15 @@ function calculation() {
     if(nullCount ===1){
       if(isNaN(kou)){
         kou = Math.sqrt(co * co + gen * gen);
+        //document.getElementById('kou').value = kou;
       }
       if(isNaN(co)){
         co = Math.sqrt(kou * kou + gen * gen);
+        //document.getElementById('co').value = co;
       }
       if(isNaN(gen)){
         gen = Math.sqrt(kou * kou + co * co);
+        //document.getElementById('gen').value = gen;
       }
 
       a = (kou + co)/gen; //中勾
@@ -43,17 +44,18 @@ function calculation() {
       h = kou-((kou*((kou*kou)/gen))/gen); //欠勾
       i = gen*(kou/co); //補玄
 
-      paragraph.textContent = `計算は${g} ${h} ${i}`;
-
-      var pa = document.getElementById("svg_txt_co");
-      pa.textContent = `殳 ${co}`;
-
-      pa = document.getElementById("svg_txt_co1");
-      pa.textContent = `殳1 ${d}`;
-
-      pa = document.getElementById("svg_txt_co2");
-      pa.textContent = `殳2 ${e}`;
-
+      document.getElementById("tspan18").textContent = `殳 ${co.toFixed(9)}`;
+      document.getElementById("tspan18-6").textContent = `殳2 ${e.toFixed(9)}`; 
+      document.getElementById("tspan18-51").textContent = `殳1 ${d.toFixed(9)}`;
+      document.getElementById("tspan18-7").textContent = `小殳 ${d.toFixed(9)}`;  //小殳 = 殳2
+      document.getElementById("tspan18-5").textContent = `玄 ${gen.toFixed(9)}`;
+      document.getElementById("tspan18-5-8").textContent = `短玄 ${b.toFixed(9)}`;
+      document.getElementById("tspan18-5-9").textContent = `長玄 ${c.toFixed(9)}`;
+      document.getElementById("tspan18-5-3").textContent = `勾 ${kou.toFixed(9)}`;
+      document.getElementById("tspan18-5-3-9").textContent = `補玄 ${i.toFixed(9)}`;
+      document.getElementById("tspan18-5-3-7").textContent = `中勾 ${a.toFixed(9)}`;
+      document.getElementById("tspan18-5-3-7-49").textContent = `小中勾 ${g.toFixed(9)}`;
+      document.getElementById("tspan18-5-3-7-4").textContent = `欠勾 ${h.toFixed(9)}`;
 
     }else{
       paragraph.textContent ="エラー";
