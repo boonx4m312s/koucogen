@@ -1,271 +1,188 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Bootstrap demo</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    </head>
-  <body>
 
-    <h1>勾殳玄の計算
-    </h1>
-    <div class="container overflow-hidden text-center">
-      <div class="row g-3 align-items-center p-1">
-        <div class="col-auto">
-          <label for="inputPassword6" class="col-form-label">勾:</label>
-        </div>
-        <div class="col col-md-4">
-          <input type="number" id="kou" class="form-control" aria-labelledby="passwordHelpInline">
-        </div>
-      </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
 
-    <div class="row g-3 align-items-center p-1">
-      <div class="col-auto">
-        <label for="inputPassword6" class="col-form-label">殳:</label>
+<body>
+
+  <h1>さしがね計算
+  </h1>
+  <div class="container overflow-hidden text-center">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#koucogen" type="button">勾殳玄の計算</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#sumikoubai" type="button">隅勾配の計算</button>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane active" id="koucogen">
+        <div class="row g-3 align-items-center p-1">
+          <div class="col-auto">
+            <label for="inputPassword6" class="col-form-label">勾:</label>
+          </div>
+          <div class="col col-md-4">
+            <input type="number" id="kou" class="form-control" aria-labelledby="passwordHelpInline">
+          </div>
+        </div>
+
+        <div class="row g-3 align-items-center p-1">
+          <div class="col-auto">
+            <label for="inputPassword6" class="col-form-label">殳:</label>
+          </div>
+          <div class="col col-md-4">
+            <input type="number" id="co" class="form-control" aria-labelledby="passwordHelpInline">
+          </div>
+        </div>
+
+        <div class="row g-3 align-items-center p-1">
+          <div class="col-auto">
+            <label for="inputPassword6" class="col-form-label">玄:</label>
+          </div>
+          <div class="col col-md-4">
+            <input type="number" id="gen" class="form-control" aria-labelledby="passwordHelpInline">
+          </div>
+        </div>
+        <div class="row g-3 align-items-center p-1 col-md-2">
+          <button type="button" id="button1" class="btn btn-primary">計算</button>
+        </div>
+        <br>
+        <svg width="1000" height="500" viewBox="0 0 264.58333 120" version="1.1" id="svg1"
+          inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)" sodipodi:docname="kikujutsu.svg"
+          xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+          xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg"
+          xmlns:svg="http://www.w3.org/2000/svg">
+          <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25"
+            inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0"
+            inkscape:deskcolor="#d1d1d1" inkscape:document-units="mm" inkscape:zoom="1" inkscape:cx="410.99999"
+            inkscape:cy="318.49999" inkscape:window-width="1920" inkscape:window-height="1009" inkscape:window-x="-8"
+            inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="layer1" />
+          <defs id="defs1">
+            <rect x="915" y="143" width="316" height="218" id="rect15" />
+          </defs>
+          <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1"
+            transform="translate(-3.0659611,-51.421183)">
+            <path style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.335566;stroke-opacity:1"
+              d="M 4.6273161,163.36978 H 161.69321 V 64.682364 Z" id="path1" />
+            <path style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.335566;stroke-opacity:1"
+              d="M 110.36986,97.024287 161.74059,163.3661" id="path2" sodipodi:nodetypes="cc" />
+            <path style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.335566;stroke-opacity:1"
+              d="m 110.56523,96.908027 h 51.27215" id="path3" sodipodi:nodetypes="cc" />
+            <path style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.335566;stroke-opacity:1"
+              d="m 110.25273,97.001797 0.24615,66.455223" id="path4" sodipodi:nodetypes="cc" />
+            <path style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.335566;stroke-opacity:1"
+              d="m 146.71085,74.134395 14.96101,22.760182" id="path5" sodipodi:nodetypes="cc" />
+            <path
+              style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.335566;stroke-dasharray:1.34226, 0.335566;stroke-dashoffset:0;stroke-opacity:1"
+              d="m 161.80195,163.37084 c 71.09301,0 71.09301,0 71.09301,0" id="path6" />
+            <path
+              style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.335566;stroke-dasharray:1.34226, 0.335566;stroke-dashoffset:0;stroke-opacity:1"
+              d="m 161.74353,64.624247 71.06015,98.761063 -0.006,-0.006" id="path7" />
+            <text xml:space="preserve"
+              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+              x="93.406746" y="177.38594" id="text18" inkscape:label="svg_txt_co">
+              <tspan sodipodi:role="line" id="tspan18"
+                style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954" x="93.406746" y="177.38594">殳
+              </tspan>
+            </text>
+            <text xml:space="preserve"
+              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+              x="130.04118" y="169.34531" id="text18-3" inkscape:label="svg_txt_e">
+              <tspan sodipodi:role="line" id="tspan18-6"
+                style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954" x="130.04118" y="169.34531">殳2
+              </tspan>
+            </text>
+            <text xml:space="preserve"
+              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+              x="55.438206" y="169.23572" id="text18-2" inkscape:label="svg_txt_d">
+              <tspan sodipodi:role="line" id="tspan18-51"
+                style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954" x="55.438206" y="169.23572">殳1
+              </tspan>
+            </text>
+            <text xml:space="preserve"
+              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+              x="134.04202" y="102.79264" id="text18-7" inkscape:label="svg_txt_e2">
+              <tspan sodipodi:role="line" id="tspan18-7"
+                style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954" x="134.04202" y="102.79264">小殳
+              </tspan>
+            </text>
+            <text xml:space="preserve"
+              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+              x="56.282852" y="99.812523" id="text18-0" inkscape:label="svg_txt_gen">
+              <tspan sodipodi:role="line" id="tspan18-5"
+                style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954" x="56.282852" y="99.812523">玄
+              </tspan>
+            </text>
+            <text xml:space="preserve"
+              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+              x="114.77395" y="83.329552" id="text18-0-9" inkscape:label="svg_txt_b">
+              <tspan sodipodi:role="line" id="tspan18-5-8"
+                style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-dasharray:none" x="114.77395"
+                y="83.329552">短玄</tspan>
+            </text>
+            <text xml:space="preserve"
+              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+              x="53.905941" y="120.83807" id="text18-0-6" inkscape:label="svg_txt_c">
+              <tspan sodipodi:role="line" id="tspan18-5-9"
+                style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954" x="53.905941" y="120.83807">長玄
+              </tspan>
+            </text>
+            <text xml:space="preserve"
+              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+              x="163.75893" y="118.74986" id="text18-0-8" inkscape:label="svg_txt_kou">
+              <tspan sodipodi:role="line" id="tspan18-5-3"
+                style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954" x="163.75893" y="118.74986">勾
+              </tspan>
+            </text>
+            <text xml:space="preserve"
+              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+              x="186.77246" y="94.982719" id="text18-0-8-2" inkscape:label="svg_txt_i">
+              <tspan sodipodi:role="line" id="tspan18-5-3-9"
+                style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954" x="186.77246" y="94.982719">補玄
+              </tspan>
+            </text>
+            <text xml:space="preserve"
+              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+              x="141.21588" y="128.90674" id="text18-0-8-7" inkscape:label="svg_txt_a">
+              <tspan sodipodi:role="line" id="tspan18-5-3-7"
+                style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954" x="141.21588" y="128.90674">中勾
+              </tspan>
+            </text>
+            <text xml:space="preserve"
+              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+              x="150.3985" y="78.640862" id="text18-0-8-7-8" inkscape:label="svg_txt_g">
+              <tspan sodipodi:role="line" id="tspan18-5-3-7-49"
+                style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954" x="150.3985" y="78.640862">小中勾
+              </tspan>
+            </text>
+            <text xml:space="preserve"
+              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+              x="97.879776" y="137.97455" id="text18-0-8-7-6" inkscape:label="svg_txt_h">
+              <tspan sodipodi:role="line" id="tspan18-5-3-7-4"
+                style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954" x="97.879776" y="137.97455">欠勾
+              </tspan>
+            </text>
+          </g>
+        </svg>
       </div>
-      <div class="col col-md-4">
-        <input type="number" id="co" class="form-control" aria-labelledby="passwordHelpInline">
+      <div>
+        隅勾配はこれから
       </div>
     </div>
+  </div>
 
-    <div class="row g-3 align-items-center p-1">
-      <div class="col-auto">
-        <label for="inputPassword6" class="col-form-label">玄:</label>
-      </div>
-      <div class="col col-md-4">
-        <input type="number" id="gen" class="form-control" aria-labelledby="passwordHelpInline">
-      </div>
-    </div>
-    <div class="row g-3 align-items-center p-1 col-md-2">
-      <button type="button" id="button1" class="btn btn-primary">計算</button>
-</div> 
-   </div>
-      <br>
-      <svg
-  width="1000"
-  height="500"
-  viewBox="0 0 264.58333 120"
-  version="1.1"
-  id="svg1"
-  inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
-  sodipodi:docname="kikujutsu.svg"
-  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:svg="http://www.w3.org/2000/svg">
- <sodipodi:namedview
-    id="namedview1"
-    pagecolor="#ffffff"
-    bordercolor="#000000"
-    borderopacity="0.25"
-    inkscape:showpageshadow="2"
-    inkscape:pageopacity="0.0"
-    inkscape:pagecheckerboard="0"
-    inkscape:deskcolor="#d1d1d1"
-    inkscape:document-units="mm"
-    inkscape:zoom="1"
-    inkscape:cx="410.99999"
-    inkscape:cy="318.49999"
-    inkscape:window-width="1920"
-    inkscape:window-height="1009"
-    inkscape:window-x="-8"
-    inkscape:window-y="-8"
-    inkscape:window-maximized="1"
-    inkscape:current-layer="layer1" />
- <defs
-    id="defs1">
-   <rect
-      x="915"
-      y="143"
-      width="316"
-      height="218"
-      id="rect15" />
- </defs>
- <g
-    inkscape:label="Layer 1"
-    inkscape:groupmode="layer"
-    id="layer1"
-    transform="translate(-3.0659611,-51.421183)">
-   <path
-      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.335566;stroke-opacity:1"
-      d="M 4.6273161,163.36978 H 161.69321 V 64.682364 Z"
-      id="path1" />
-   <path
-      style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.335566;stroke-opacity:1"
-      d="M 110.36986,97.024287 161.74059,163.3661"
-      id="path2"
-      sodipodi:nodetypes="cc" />
-   <path
-      style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.335566;stroke-opacity:1"
-      d="m 110.56523,96.908027 h 51.27215"
-      id="path3"
-      sodipodi:nodetypes="cc" />
-   <path
-      style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.335566;stroke-opacity:1"
-      d="m 110.25273,97.001797 0.24615,66.455223"
-      id="path4"
-      sodipodi:nodetypes="cc" />
-   <path
-      style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.335566;stroke-opacity:1"
-      d="m 146.71085,74.134395 14.96101,22.760182"
-      id="path5"
-      sodipodi:nodetypes="cc" />
-   <path
-      style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.335566;stroke-dasharray:1.34226, 0.335566;stroke-dashoffset:0;stroke-opacity:1"
-      d="m 161.80195,163.37084 c 71.09301,0 71.09301,0 71.09301,0"
-      id="path6" />
-   <path
-      style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.335566;stroke-dasharray:1.34226, 0.335566;stroke-dashoffset:0;stroke-opacity:1"
-      d="m 161.74353,64.624247 71.06015,98.761063 -0.006,-0.006"
-      id="path7" />
-   <text
-      xml:space="preserve"
-      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-      x="93.406746"
-      y="177.38594"
-      id="text18"
-      inkscape:label="svg_txt_co"><tspan
-        sodipodi:role="line"
-        id="tspan18"
-        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
-        x="93.406746"
-        y="177.38594">殳</tspan></text>
-   <text
-      xml:space="preserve"
-      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-      x="130.04118"
-      y="169.34531"
-      id="text18-3"
-      inkscape:label="svg_txt_e"><tspan
-        sodipodi:role="line"
-        id="tspan18-6"
-        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
-        x="130.04118"
-        y="169.34531">殳2</tspan></text>
-   <text
-      xml:space="preserve"
-      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-      x="55.438206"
-      y="169.23572"
-      id="text18-2"
-      inkscape:label="svg_txt_d"><tspan
-        sodipodi:role="line"
-        id="tspan18-51"
-        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
-        x="55.438206"
-        y="169.23572">殳1</tspan></text>
-   <text
-      xml:space="preserve"
-      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-      x="134.04202"
-      y="102.79264"
-      id="text18-7"
-      inkscape:label="svg_txt_e2"><tspan
-        sodipodi:role="line"
-        id="tspan18-7"
-        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
-        x="134.04202"
-        y="102.79264">小殳</tspan></text>
-   <text
-      xml:space="preserve"
-      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-      x="56.282852"
-      y="99.812523"
-      id="text18-0"
-      inkscape:label="svg_txt_gen"><tspan
-        sodipodi:role="line"
-        id="tspan18-5"
-        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
-        x="56.282852"
-        y="99.812523">玄</tspan></text>
-   <text
-      xml:space="preserve"
-      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-      x="114.77395"
-      y="83.329552"
-      id="text18-0-9"
-      inkscape:label="svg_txt_b"><tspan
-        sodipodi:role="line"
-        id="tspan18-5-8"
-        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-dasharray:none"
-        x="114.77395"
-        y="83.329552">短玄</tspan></text>
-   <text
-      xml:space="preserve"
-      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-      x="53.905941"
-      y="120.83807"
-      id="text18-0-6"
-      inkscape:label="svg_txt_c"><tspan
-        sodipodi:role="line"
-        id="tspan18-5-9"
-        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
-        x="53.905941"
-        y="120.83807">長玄</tspan></text>
-   <text
-      xml:space="preserve"
-      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-      x="163.75893"
-      y="118.74986"
-      id="text18-0-8"
-      inkscape:label="svg_txt_kou"><tspan
-        sodipodi:role="line"
-        id="tspan18-5-3"
-        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
-        x="163.75893"
-        y="118.74986">勾</tspan></text>
-   <text
-      xml:space="preserve"
-      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-      x="186.77246"
-      y="94.982719"
-      id="text18-0-8-2"
-      inkscape:label="svg_txt_i"><tspan
-        sodipodi:role="line"
-        id="tspan18-5-3-9"
-        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
-        x="186.77246"
-        y="94.982719">補玄</tspan></text>
-   <text
-      xml:space="preserve"
-      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-      x="141.21588"
-      y="128.90674"
-      id="text18-0-8-7"
-      inkscape:label="svg_txt_a"><tspan
-        sodipodi:role="line"
-        id="tspan18-5-3-7"
-        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
-        x="141.21588"
-        y="128.90674">中勾</tspan></text>
-   <text
-      xml:space="preserve"
-      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-      x="150.3985"
-      y="78.640862"
-      id="text18-0-8-7-8"
-      inkscape:label="svg_txt_g"><tspan
-        sodipodi:role="line"
-        id="tspan18-5-3-7-49"
-        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
-        x="150.3985"
-        y="78.640862">小中勾</tspan></text>
-   <text
-      xml:space="preserve"
-      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.96607px;font-family:Meiryo;-inkscape-font-specification:Meiryo;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497952;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-      x="97.879776"
-      y="137.97455"
-      id="text18-0-8-7-6"
-      inkscape:label="svg_txt_h"><tspan
-        sodipodi:role="line"
-        id="tspan18-5-3-7-4"
-        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.497954"
-        x="97.879776"
-        y="137.97455">欠勾</tspan></text>
- </g>
-      </svg>
   <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
