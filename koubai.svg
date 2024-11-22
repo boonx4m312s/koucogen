@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="820"
+   height="462"
+   viewBox="0 0 820 462"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="koubai.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="758.37202"
+     inkscape:cy="345.42166"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.978;stroke-dasharray:none;stroke-opacity:1"
+       d="M 74.112766,338.60696 H 467.11443 V 92.470979 Z"
+       id="path1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.978;stroke-dasharray:none;stroke-opacity:1"
+       d="M 467.6,338.60945 H 618.59437"
+       id="path2" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.978;stroke-dasharray:none;stroke-opacity:1"
+       d="m 467.6,92.079 h 150"
+       id="path3" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.965333;stroke-dasharray:none;stroke-opacity:1"
+       d="M 618.089,337.804 V 91.315"
+       id="path4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.978;stroke-dasharray:none;stroke-opacity:1"
+       d="M 618.01133,92.100658 74.5625,338.625"
+       id="path5" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.978;stroke-dasharray:5.86799991,5.86799991;stroke-opacity:1;stroke-dashoffset:0"
+       d="M 466.75,338.5625 353.25,163.9375"
+       id="path6" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.978;stroke-dasharray:5.86799991,5.86799991;stroke-opacity:1;stroke-dashoffset:0"
+       d="m 353.0625,163.875 v 48.478"
+       id="path7" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.978;stroke-dasharray:none;stroke-opacity:1"
+       d="M 353.15564,212.10994 V 338.75"
+       id="path8" />
+    <text
+       xml:space="preserve"
+       style="font-size:16.4716px;font-family:Meiryo;-inkscape-font-specification:Meiryo;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.518858;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="517.98828"
+       y="153.15396"
+       id="text8"><tspan
+         sodipodi:role="line"
+         id="tspan8"
+         x="517.98828"
+         y="153.15396"
+         style="stroke-width:0.518858">隅投長玄</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20.248px;font-family:Meiryo;-inkscape-font-specification:Meiryo;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.637813;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="362.1268"
+       y="366.71771"
+       id="text8-0"><tspan
+         sodipodi:role="line"
+         id="tspan8-1"
+         x="362.1268"
+         y="366.71771"
+         style="stroke-width:0.637813">隅欠勾</tspan></text>
+  </g>
+</svg>
