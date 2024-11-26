@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="820"
-   height="462"
-   viewBox="0 0 820 462"
+   width="1000"
+   height="500"
+   viewBox="0 0 1000 500"
    version="1.1"
    id="svg1"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
@@ -23,14 +23,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="758.37202"
-     inkscape:cy="345.42166"
-     inkscape:window-width="1920"
-     inkscape:window-height="1009"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
+     inkscape:zoom="1"
+     inkscape:cx="449.5"
+     inkscape:cy="252"
+     inkscape:window-width="1409"
+     inkscape:window-height="1032"
+     inkscape:window-x="234"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
      id="defs1" />
@@ -39,58 +39,115 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.978;stroke-dasharray:none;stroke-opacity:1"
-       d="M 74.112766,338.60696 H 467.11443 V 92.470979 Z"
+       style="fill:none;stroke:#000000;stroke-width:1.35192;stroke-dasharray:none;stroke-opacity:1"
+       d="M 15.763514,433.2112 H 559.02239 V 92.969488 Z"
        id="path1" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.978;stroke-dasharray:none;stroke-opacity:1"
-       d="M 467.6,338.60945 H 618.59437"
+       style="fill:none;stroke:#000000;stroke-width:1.35192;stroke-dasharray:none;stroke-opacity:1"
+       d="m 559.69361,433.21464 h 208.7244"
        id="path2" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.978;stroke-dasharray:none;stroke-opacity:1"
-       d="m 467.6,92.079 h 150"
+       style="fill:none;stroke:#000000;stroke-width:1.35192;stroke-dasharray:none;stroke-opacity:1"
+       d="M 559.69361,92.427653 H 767.04345"
        id="path3" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.965333;stroke-dasharray:none;stroke-opacity:1"
-       d="M 618.089,337.804 V 91.315"
+       style="fill:none;stroke:#000000;stroke-width:1.33441;stroke-dasharray:none;stroke-opacity:1"
+       d="M 767.71942,432.10125 V 91.37154"
        id="path4" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.978;stroke-dasharray:none;stroke-opacity:1"
-       d="M 618.01133,92.100658 74.5625,338.625"
+       style="fill:none;stroke:#000000;stroke-width:1.35192;stroke-dasharray:none;stroke-opacity:1"
+       d="M 767.61205,92.457587 16.385196,433.23614"
        id="path5" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.978;stroke-dasharray:5.86799991,5.86799991;stroke-opacity:1;stroke-dashoffset:0"
-       d="M 466.75,338.5625 353.25,163.9375"
+       style="fill:none;stroke:#000000;stroke-width:1.35192;stroke-dasharray:8.11153, 8.11153;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 558.51862,433.14974 401.62391,191.75997"
        id="path6" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.978;stroke-dasharray:5.86799991,5.86799991;stroke-opacity:1;stroke-dashoffset:0"
-       d="m 353.0625,163.875 v 48.478"
+       style="fill:none;stroke:#000000;stroke-width:1.35192;stroke-dasharray:8.11153, 8.11153;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 401.36473,191.67357 v 67.01271"
        id="path7" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.978;stroke-dasharray:none;stroke-opacity:1"
-       d="M 353.15564,212.10994 V 338.75"
+       style="fill:none;stroke:#000000;stroke-width:2.34044;stroke-dasharray:none;stroke-opacity:1"
+       d="M 401.49348,258.35029 V 433.40893"
        id="path8" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.774183;stroke-dasharray:none;stroke-opacity:1"
+       d="M 462.90654,433.22335 V 231.05758"
+       id="path11" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.34044;stroke-dasharray:none;stroke-opacity:1"
+       d="M 462.90663,432.9439 V 288.41151"
+       id="path11-3" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.798988;stroke-dasharray:9.58785, 9.58785;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 559.23052,187.08759 H 768.02834"
+       id="path13" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.798988;stroke-dasharray:9.58785, 9.58785;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 15.650829,433.19292 767.91748,186.96541"
+       id="path14" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.798988;stroke-dasharray:9.58785, 9.58785;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 400.82147,191.42506 158.21552,-4.58965"
+       id="path15" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.0532;stroke-dasharray:12.6384, 12.6384;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 559.07731,432.24837 -96.14178,-201.54091 0.25859,-0.10344"
+       id="path9" />
     <text
        xml:space="preserve"
-       style="font-size:16.4716px;font-family:Meiryo;-inkscape-font-specification:Meiryo;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.518858;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="517.98828"
-       y="153.15396"
-       id="text8"><tspan
+       style="font-size:14.0426px;font-family:Meiryo;-inkscape-font-specification:Meiryo;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.75533;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="345.49789"
+       y="351.60364"
+       id="text9"><tspan
          sodipodi:role="line"
-         id="tspan8"
-         x="517.98828"
-         y="153.15396"
-         style="stroke-width:0.518858">隅投長玄</tspan></text>
+         id="tspan9"
+         x="345.49789"
+         y="351.60364"
+         style="fill:#000000;fill-opacity:1;stroke-width:1.75533">欠勾隅勾</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:20.248px;font-family:Meiryo;-inkscape-font-specification:Meiryo;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.637813;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="362.1268"
-       y="366.71771"
-       id="text8-0"><tspan
+       style="font-size:14.0426px;font-family:Meiryo;-inkscape-font-specification:Meiryo;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.75533;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="466.73843"
+       y="261.9657"
+       id="text9-2"><tspan
          sodipodi:role="line"
-         id="tspan8-1"
-         x="362.1268"
-         y="366.71771"
-         style="stroke-width:0.637813">隅欠勾</tspan></text>
+         id="tspan9-0"
+         x="466.73843"
+         y="261.9657"
+         style="fill:#000000;fill-opacity:1;stroke-width:1.75533">隅欠勾</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14.0426px;font-family:Meiryo;-inkscape-font-specification:Meiryo;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.75533;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="427.09189"
+       y="454.85431"
+       id="text9-1"><tspan
+         sodipodi:role="line"
+         id="tspan9-06"
+         x="427.09189"
+         y="454.85431"
+         style="fill:#000000;fill-opacity:1;stroke-width:1.75533">平垂木栓勾配</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14.0426px;font-family:Meiryo;-inkscape-font-specification:Meiryo;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.75533;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="740.78912"
+       y="449.76941"
+       id="text9-1-1"><tspan
+         sodipodi:role="line"
+         id="tspan9-06-5"
+         x="740.78912"
+         y="449.76941"
+         style="fill:#000000;fill-opacity:1;stroke-width:1.75533">殳の裏目</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14.0426px;font-family:Meiryo;-inkscape-font-specification:Meiryo;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.75533;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="772.01251"
+       y="179.20842"
+       id="text9-1-1-3"><tspan
+         sodipodi:role="line"
+         id="tspan9-06-5-2"
+         x="772.01251"
+         y="179.20842"
+         style="fill:#000000;fill-opacity:1;stroke-width:1.75533">隅勾配</tspan></text>
   </g>
 </svg>
