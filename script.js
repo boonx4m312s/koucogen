@@ -120,9 +120,9 @@ function calculation() {
   document.getElementById("tspan18-5-3-7-4").textContent = `欠勾 ${h.toFixed(9)}`;
   document.getElementById("text18-0-3").textContent = `勾配 ${θ.toFixed(9)} / 100`;
 
-  document.getElementById("text9").textContent = `欠勾隅勾 ${l.toFixed(9)}`;
-  document.getElementById("text9-2").textContent = `隅欠勾 ${m.toFixed(9)}`;
-  document.getElementById("text9-1").textContent = `平垂木栓勾配 ${o.toFixed(9)}`;
-  document.getElementById("text9-1-1").textContent = `殳の裏目\n${j.toFixed(9)}`;
-  document.getElementById("text9-1-1-3").textContent = `隅勾配 ${k.toFixed(9)}`;
+  // document.getElementById("text9").textContent = `欠勾隅勾 ${l.toFixed(9)}`;
+  // document.getElementById("text9-2").textContent = `隅欠勾 ${m.toFixed(9)}`;
+  // document.getElementById("text9-1").textContent = `平垂木栓勾配 ${o.toFixed(9)}`;
+  // document.getElementById("text9-1-1").textContent = `殳の裏目\n${j.toFixed(9)}`;
+  // document.getElementById("text9-1-1-3").textContent = `隅勾配 ${k.toFixed(9)}`;
 }
