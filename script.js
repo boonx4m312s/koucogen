@@ -105,22 +105,33 @@ function calculation() {
   n = getSyoco(k, co);
   // 平垂木栓勾配
   o = (h * n) / e;
+  // 小短玄
+  p = ((kou-h)**2) /b; //( (勾‐欠勾) *  ) / 短玄
+  // 平勾配欠勾～中勾
+  q = (h * (co-e)) / c; //(欠勾* (殳-小殳))/ 長玄
+
+  // 1
+  
 
   const myTable = document.getElementById("table_koucogen");
 
   myTable.rows[0].cells[1].textContent = kou.toFixed(9);
   myTable.rows[1].cells[1].textContent = co.toFixed(9);
   myTable.rows[2].cells[1].textContent = gen.toFixed(9);
-  myTable.rows[3].cells[1].textContent = d.toFixed(9); //殳1
-  myTable.rows[4].cells[1].textContent = e.toFixed(9); //殳2 
-  myTable.rows[5].cells[1].textContent = e.toFixed(9); //小殳
-  myTable.rows[6].cells[1].textContent = b.toFixed(9); //短玄
-  myTable.rows[7].cells[1].textContent = c.toFixed(9); //長玄
-  myTable.rows[8].cells[1].textContent = i.toFixed(9); //補玄
-  myTable.rows[9].cells[1].textContent = i.toFixed(9); //中勾
+  myTable.rows[3].cells[1].textContent = i.toFixed(9); //中勾
+  myTable.rows[4].cells[1].textContent = c.toFixed(9); //長玄
+  myTable.rows[5].cells[1].textContent = b.toFixed(9); //短玄
+  myTable.rows[6].cells[1].textContent = (b/2).toFixed(9); //短玄の2分の1
+  myTable.rows[7].cells[1].textContent = d.toFixed(9); //殳1
+  myTable.rows[8].cells[1].textContent = e.toFixed(9); //小殳
+  myTable.rows[9].cells[1].textContent = f.toFixed(9); //小勾
   myTable.rows[10].cells[1].textContent = g.toFixed(9); //小中勾
   myTable.rows[11].cells[1].textContent = h.toFixed(9); //欠勾
-  myTable.rows[12].cells[1].textContent = θ.toFixed(9) + "/ 100"; //勾配
+  myTable.rows[12].cells[1].textContent = p.toFixed(9); //小短玄
+  myTable.rows[13].cells[1].textContent = q.toFixed(9); //平勾配欠勾～中勾
+  myTable.rows[14].cells[1].textContent = q.toFixed(9); //1
+  myTable.rows[15].cells[1].textContent = q.toFixed(9); //2
+  myTable.rows[16].cells[1].textContent = q.toFixed(9); //3
 
 
 
