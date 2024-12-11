@@ -106,23 +106,26 @@ function calculation() {
   // 平垂木栓勾配
   o = (h * n) / e;
 
-  document.getElementById("tspan18").textContent = `殳 ${co.toFixed(9)}`;
-  document.getElementById("tspan18-6").textContent = `殳2 ${e.toFixed(9)}`;
-  document.getElementById("tspan18-51").textContent = `殳1 ${d.toFixed(9)}`;
-  document.getElementById("tspan18-7").textContent = `小殳 ${e.toFixed(9)}`;  //小殳 = 殳2
-  document.getElementById("tspan18-5").textContent = `玄 ${gen.toFixed(9)}`;
-  document.getElementById("tspan18-5-8").textContent = `短玄 ${b.toFixed(9)}`;
-  document.getElementById("tspan18-5-9").textContent = `長玄 ${c.toFixed(9)}`;
-  document.getElementById("tspan18-5-3").textContent = `勾 ${kou.toFixed(9)}`;
-  document.getElementById("tspan18-5-3-9").textContent = `補玄 ${i.toFixed(9)}`;
-  document.getElementById("tspan18-5-3-7").textContent = `中勾 ${a.toFixed(9)}`;
-  document.getElementById("tspan18-5-3-7-49").textContent = `小中勾 ${g.toFixed(9)}`;
-  document.getElementById("tspan18-5-3-7-4").textContent = `欠勾 ${h.toFixed(9)}`;
-  document.getElementById("text18-0-3").textContent = `勾配 ${θ.toFixed(9)} / 100`;
-  
   const myTable = document.getElementById("table_koucogen");
-  const cell = myTable.rows[1].cells[1];
-  cell.textContent =co.toFixed(9)
+
+  myTable.rows[0].cells[1].textContent = kou.toFixed(9);
+  myTable.rows[1].cells[1].textContent = co.toFixed(9);
+  myTable.rows[2].cells[1].textContent = gen.toFixed(9);
+  myTable.rows[3].cells[1].textContent = d.toFixed(9); //殳1
+  myTable.rows[4].cells[1].textContent = e.toFixed(9); //殳2 
+  myTable.rows[5].cells[1].textContent = e.toFixed(9); //小殳
+  myTable.rows[6].cells[1].textContent = b.toFixed(9); //短玄
+  myTable.rows[7].cells[1].textContent = c.toFixed(9); //長玄
+  myTable.rows[8].cells[1].textContent = i.toFixed(9); //補玄
+  myTable.rows[9].cells[1].textContent = i.toFixed(9); //中勾
+  myTable.rows[10].cells[1].textContent = g.toFixed(9); //小中勾
+  myTable.rows[11].cells[1].textContent = h.toFixed(9); //欠勾
+  myTable.rows[12].cells[1].textContent = θ.toFixed(9) + "/ 100"; //勾配
+
+
+
+
+  myTable.rows[3].cells[1].textContent = θ.toFixed(9);  //勾配
   
   // document.getElementById("text9").textContent = `欠勾隅勾 ${l.toFixed(9)}`;
   // document.getElementById("text9-2").textContent = `隅欠勾 ${m.toFixed(9)}`;
