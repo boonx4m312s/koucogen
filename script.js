@@ -11,6 +11,17 @@ function getSyoco(kou, co) {
   gen = Math.sqrt(kou * kou + co * co);
   return (co * ((kou * kou) / gen)) / gen;
 }
+function getSyochukou(kou,co){
+  // 小中勾を返す
+  gen = Math.sqrt(kou * kou + co * co);
+  g = (((kou * ((kou * kou) / gen)) / gen) * ((co * ((kou * kou) / gen)) / gen)) / ((kou * kou) / gen); //小中勾
+  return g;
+}
+function getChukou(kou, co ){
+  //中勾を返す
+  gen = Math.sqrt(kou * kou + co * co);
+  return (kou * co) / gen;
+} 
 
 function calculation() {
   let kou = parseFloat(document.getElementById('kou').value);
@@ -77,13 +88,13 @@ function calculation() {
     }
   }
 
-  a = (kou * co) / gen; //中勾
+  a = getChukou(kou,co); //中勾
   b = (kou * kou) / gen; // 短玄
   c = (co * co) / gen; // 長玄
   d = (co * ((co * co) / gen)) / gen; //殳1
   e = getSyoco(kou, co); //殳2 小殳も同じ
   f = (kou * ((kou * kou) / gen)) / gen; // 小勾
-  g = (((kou * ((kou * kou) / gen)) / gen) * ((co * ((kou * kou) / gen)) / gen)) / ((kou * kou) / gen); //小中勾
+  g = getSyochukou(kou,co); //小中勾
   h = getKeccou(kou, co); //欠勾
   i = gen * (kou / co); //補玄
 
@@ -105,24 +116,100 @@ function calculation() {
   n = getSyoco(k, co);
   // 平垂木栓勾配
   o = (h * n) / e;
+  // 小短玄
+  p = ((kou-h)**2) /b; //( (勾‐欠勾) *  ) / 短玄
+  // 平勾配欠勾～中勾
+  q = (h * (co-e)) / c; //(欠勾* (殳-小殳))/ 長玄
 
-  document.getElementById("tspan18").textContent = `殳 ${co.toFixed(9)}`;
-  document.getElementById("tspan18-6").textContent = `殳2 ${e.toFixed(9)}`;
-  document.getElementById("tspan18-51").textContent = `殳1 ${d.toFixed(9)}`;
-  document.getElementById("tspan18-7").textContent = `小殳 ${e.toFixed(9)}`;  //小殳 = 殳2
-  document.getElementById("tspan18-5").textContent = `玄 ${gen.toFixed(9)}`;
-  document.getElementById("tspan18-5-8").textContent = `短玄 ${b.toFixed(9)}`;
-  document.getElementById("tspan18-5-9").textContent = `長玄 ${c.toFixed(9)}`;
-  document.getElementById("tspan18-5-3").textContent = `勾 ${kou.toFixed(9)}`;
-  document.getElementById("tspan18-5-3-9").textContent = `補玄 ${i.toFixed(9)}`;
-  document.getElementById("tspan18-5-3-7").textContent = `中勾 ${a.toFixed(9)}`;
-  document.getElementById("tspan18-5-3-7-49").textContent = `小中勾 ${g.toFixed(9)}`;
-  document.getElementById("tspan18-5-3-7-4").textContent = `欠勾 ${h.toFixed(9)}`;
-  document.getElementById("text18-0-3").textContent = `勾配 ${θ.toFixed(9)} / 100`;
+  // 1
+  r = getKeccou(h, d);
+  //2 
+  s = getSyoco(h,d);
+  //3 
+  t = getSyochukou(h,d);
 
-  document.getElementById("text9").textContent = `欠勾隅勾 ${l.toFixed(9)}`;
-  document.getElementById("text9-2").textContent = `隅欠勾 ${m.toFixed(9)}`;
-  document.getElementById("text9-1").textContent = `平垂木栓勾配 ${o.toFixed(9)}`;
-  document.getElementById("text9-1-1").textContent = `殳の裏目\n${j.toFixed(9)}`;
-  document.getElementById("text9-1-1-3").textContent = `隅勾配 ${k.toFixed(9)}`;
+  //半勾配
+  u = kou / 2;
+  //隅勾配 (半勾配*裏目) /co
+  v = (u*j)/co;
+
+  // 隅中勾
+  w = getChukou(k,co);
+  // 隅中勾2
+  x = getChukou(kou,j);;
+  
+  // 隅投長玄
+  y = Math.sqrt(kou * kou + ((co *l)/k) **2);
+  
+
+  //隅玄1
+  z = Math.sqrt(k * k + j * j);
+  
+  // 隅長玄1
+  aa =  (j * j) / z; 
+  // 隅玄2
+  ab = Math.sqrt(v * v + co* co);
+  // 隅長玄2
+  ac = (co * co) / ab; 
+  
+  //平勾配の角度
+  adθ = Math.atan(kou/co);
+  //隅勾配の角度
+  aeθ = Math.atan(v/co);
+  // 
+  afθ = adθ-aeθ;
+  //平垂木栓勾配 (隅勾配図2)
+  ag = co* Math.tan(afθ);
+
+  // 裏目勾
+  ah = Math.tan(adθ)* j;
+  // 裏目勾の角度
+  aiθ =Math.atan(ah/co);
+  // 投勾配用の角度
+  ajθ = aiθ- aeθ;
+  // 投勾配
+  ak = co *Math.tan(ajθ);
+
+
+
+
+  var myTable = document.getElementById("table_koucogen");
+  myTable.rows[0].cells[1].textContent = kou.toFixed(9);  // 隅勾配
+  myTable.rows[1].cells[1].textContent = co.toFixed(9);
+  myTable.rows[2].cells[1].textContent = gen.toFixed(9);
+  myTable.rows[3].cells[1].textContent = i.toFixed(9); //中勾
+  myTable.rows[4].cells[1].textContent = c.toFixed(9); //長玄
+  myTable.rows[5].cells[1].textContent = b.toFixed(9); //短玄
+  myTable.rows[6].cells[1].textContent = (b/2).toFixed(9); //短玄の2分の1
+  myTable.rows[7].cells[1].textContent = d.toFixed(9); //殳1
+  myTable.rows[8].cells[1].textContent = e.toFixed(9); //小殳
+  myTable.rows[9].cells[1].textContent = f.toFixed(9); //小勾
+  myTable.rows[10].cells[1].textContent = g.toFixed(9); //小中勾
+  myTable.rows[11].cells[1].textContent = h.toFixed(9); //欠勾
+  myTable.rows[12].cells[1].textContent = p.toFixed(9); //小短玄
+  myTable.rows[13].cells[1].textContent = q.toFixed(9); //平勾配欠勾～中勾
+  myTable.rows[14].cells[1].textContent = r.toFixed(9); //1
+  myTable.rows[15].cells[1].textContent = s.toFixed(9); //2
+  myTable.rows[16].cells[1].textContent = t.toFixed(9); //3
+
+  myTable = document.getElementById("table_sumikoubai1");
+  myTable.rows[0].cells[1].textContent = v.toFixed(9) + "/100";  //隅勾配
+  myTable.rows[1].cells[1].textContent = k.toFixed(9); //隅勾
+  myTable.rows[2].cells[1].textContent = l.toFixed(9);  //欠勾隅勾
+  myTable.rows[3].cells[1].textContent = m.toFixed(9); //隅欠勾
+  myTable.rows[4].cells[1].textContent = w.toFixed(9); //隅中勾
+  myTable.rows[5].cells[1].textContent = x.toFixed(9); //隅中勾2
+  myTable.rows[6].cells[1].textContent = y.toFixed(9); //隅投長玄
+  myTable.rows[7].cells[1].textContent = ag.toFixed(9); //平垂木栓勾配
+  myTable.rows[8].cells[1].textContent = u.toFixed(9); //半勾配
+
+  myTable = document.getElementById("table_sumikoubai2");
+  myTable.rows[0].cells[1].textContent = aa.toFixed(9);  //隅長玄1
+  myTable.rows[1].cells[1].textContent = ac.toFixed(9); //隅長玄2
+  myTable.rows[2].cells[1].textContent = z.toFixed(9);  //隅玄1
+  myTable.rows[3].cells[1].textContent = ab.toFixed(9); //隅玄2
+  myTable.rows[4].cells[1].textContent = ak.toFixed(9); //投勾配
+  myTable.rows[5].cells[1].textContent = w.toFixed(9); //隅中勾
+  myTable.rows[6].cells[1].textContent = x.toFixed(9); //隅中勾2
+  myTable.rows[7].cells[1].textContent = o.toFixed(9); //平垂木栓勾配
 }
