@@ -160,7 +160,7 @@ function calculation() {
   x = getChukou(kou,j);
   
   // 隅投長玄
-  y = Math.sqrt((l**2) + ((co-e-s)**2) );
+  y = Math.sqrt((l**2) + ((co-e)**2));
 
   //隅玄1
   z = Math.sqrt(k * k + co * co);
