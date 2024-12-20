@@ -23,7 +23,7 @@ function getChukou(kou, co ){
   return (kou * co) / gen;
 } 
 // 平垂木栓勾配を計算する関数
-function getTaruki(kou, co, k = null) {
+function getTaruki(kou, co) {
   // 角度aを計算
   const angleA = Math.atan(kou / co) * (180 / Math.PI);
 
@@ -42,6 +42,28 @@ function getTaruki(kou, co, k = null) {
   const tarukiLength = co * Math.tan(angleDifference / (180 / Math.PI));
 
   return tarukiLength;
+}
+
+function calculateAngle(base, height) {
+  // 正接を計算
+  const tangent = height / base;
+
+  // ラジアンで角度を求める
+  const radian = Math.atan(tangent);
+
+  // ラジアンを度数法に変換
+  const degree = radian * 180 / Math.PI;
+
+  return degree;
+}
+function calculateHeight(base, angle) {
+  // 角度をラジアンに変換
+  const radian = angle * Math.PI / 180;
+
+  // 高さを計算
+  const height = base * Math.tan(radian);
+
+  return height;
 }
 
 function calculation() {
@@ -129,6 +151,7 @@ function calculation() {
   j = Math.sqrt(co * co + co * co);
   //隅勾配の勾
   k = (kou * co) / j;
+
   // 欠勾隅勾
   l = (k * d) / co;
   //隅欠勾
@@ -174,8 +197,16 @@ function calculation() {
   
   //平垂木栓勾配 (隅勾配図2)
   ag = getTaruki(kou,co);
-  ak = getTaruki(kou,co,k);
+  //
 
+  //投勾配
+  // 殳 * 勾裏目の角度
+  ak = calculateAngle(co,((kou*j)/co));
+  // 隅勾 * 裏目殳の角度
+  al = calculateAngle(co,k);
+  an = ak-al;
+  am = calculateHeight(co,an);
+  
   decimalPlaces = 8
 
   var myTable = document.getElementById("table_koucogen");
@@ -214,7 +245,7 @@ function calculation() {
   myTable.rows[1].cells[1].textContent = ac.toFixed(decimalPlaces); //隅長玄2
   myTable.rows[2].cells[1].textContent = z.toFixed(decimalPlaces);  //隅玄1
   myTable.rows[3].cells[1].textContent = ab.toFixed(decimalPlaces); //隅玄2
-  myTable.rows[4].cells[1].textContent = ak.toFixed(decimalPlaces); //投勾配
+  myTable.rows[4].cells[1].textContent = am.toFixed(decimalPlaces); //投勾配
   myTable.rows[5].cells[1].textContent = w.toFixed(decimalPlaces); //隅中勾
   myTable.rows[6].cells[1].textContent = x.toFixed(decimalPlaces); //隅中勾2
   myTable.rows[7].cells[1].textContent = o.toFixed(decimalPlaces); //平垂木栓勾配
