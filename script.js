@@ -228,6 +228,7 @@ function calculation() {
   myTable.rows[15].cells[1].textContent = s.toFixed(decimalPlaces); //2
   myTable.rows[16].cells[1].textContent = t.toFixed(decimalPlaces); //3
   myTable.rows[17].cells[1].textContent = i.toFixed(decimalPlaces); //補玄
+  myTable.rows[18].cells[1].textContent = θ.toFixed(decimalPlaces)+ " /100"; //勾配
 
   myTable = document.getElementById("table_sumikoubai1");
   myTable.rows[0].cells[1].textContent = v.toFixed(decimalPlaces) + "/100";  //隅勾配
