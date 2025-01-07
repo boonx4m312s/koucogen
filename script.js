@@ -1,6 +1,23 @@
 const button = document.getElementById('button1');
 button.addEventListener("click", calculation);
 
+const button2 = document.getElementById('button2');
+button2.addEventListener("click", refreshText);
+
+
+function refreshText() {
+  document.getElementById('kou').value = "";
+  document.getElementById('co').value = "";
+  document.getElementById('gen').value = "";
+  document.getElementById('grad').value = "";
+  document.getElementById('kou').focus();
+
+  const tdElements = document.querySelectorAll("#table_koucogen td");
+  // 各<td>の内容を空文字に設定
+  tdElements.forEach(td => {
+    td.textContent = "";
+  });
+}
 function getKeccou(kou, co) {
   gen = Math.sqrt(kou * kou + co * co);
   //欠勾を返す
