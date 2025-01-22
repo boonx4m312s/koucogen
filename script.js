@@ -41,24 +41,13 @@ function getChukou(kou, co ){
 } 
 // 平垂木栓勾配を計算する関数
 function getTaruki(kou, co) {
-  // 角度aを計算
-  const angleA = Math.atan(kou / co) * (180 / Math.PI);
-
-  // 角度bを計算
-  let angleB;
-  if (k === null) {
-      angleB = Math.atan((kou / 2) / co) * (180 / Math.PI);
-  } else {
-      angleB = Math.atan(k / co) * (180 / Math.PI);
-  }
-
-  // 角度の差を計算
-  const angleDifference = angleA - angleB;
-
-  // 平垂木栓の長さを計算
-  const tarukiLength = co * Math.tan(angleDifference / (180 / Math.PI));
-
-  return tarukiLength;
+  // 平垂木栓勾配を計算
+  A = Math.sqrt(kou *kou + co * co);
+  S1 = (kou * co *(1/2)) - (kou * (co/2) *(1/2));
+  B = (S1*2)/A;
+  C = Math.sqrt((kou/2) *(kou/2) -B *B);
+  D = A-C;
+  return (B* co)/D;
 }
 
 function calculateAngle(base, height) {
