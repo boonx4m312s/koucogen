@@ -4,7 +4,6 @@ button.addEventListener("click", calculation);
 const button2 = document.getElementById('button2');
 button2.addEventListener("click", refreshText);
 
-
 function refreshText() {
   document.getElementById('kou').value = "";
   document.getElementById('co').value = "";
@@ -18,27 +17,35 @@ function refreshText() {
     td.textContent = "";
   });
 }
+
 function getKeccou(kou, co) {
   gen = Math.sqrt(kou * kou + co * co);
   //欠勾を返す
   return kou - ((kou * ((kou * kou) / gen)) / gen);
 }
+
 function getSyoco(kou, co) {
   //小殳を返す
   gen = Math.sqrt(kou * kou + co * co);
   return (co * ((kou * kou) / gen)) / gen;
 }
+
 function getSyochukou(kou,co){
   // 小中勾を返す
   gen = Math.sqrt(kou * kou + co * co);
-  g = (((kou * ((kou * kou) / gen)) / gen) * ((co * ((kou * kou) / gen)) / gen)) / ((kou * kou) / gen); //小中勾
+  f = (kou * ((kou * kou) / gen) )/ gen; // 小勾
+  e = getSyoco(kou, co); //殳2 小殳も同じ
+  bb = (kou * kou) / gen; // 短玄
+  g= (f * e) / bb;
   return g;
 }
+
 function getChukou(kou, co ){
   //中勾を返す
   gen = Math.sqrt(kou * kou + co * co);
   return (kou * co) / gen;
 } 
+
 // 平垂木栓勾配を計算する関数
 function getTaruki(kou, co) {
   // 平垂木栓勾配を計算
@@ -70,6 +77,13 @@ function calculateHeight(base, angle) {
   const height = base * Math.tan(radian);
 
   return height;
+}
+
+function truncateToDigits(num) {
+  let decimalPlaces = 8;
+  // 8桁目までを残すために10の7乗をかける
+  let Digits = Math.pow(10,decimalPlaces);
+  return Math.floor(num * Digits ) / Digits;
 }
 
 function calculation() {
@@ -137,15 +151,15 @@ function calculation() {
     }
   }
 
-  a = getChukou(kou,co); //中勾
-  b = (kou * kou) / gen; // 短玄
-  c = (co * co) / gen; // 長玄
-  d = (co * ((co * co) / gen)) / gen; //殳1
-  e = getSyoco(kou, co); //殳2 小殳も同じ
-  f = (kou * ((kou * kou) / gen)) / gen; // 小勾
-  g = getSyochukou(kou,co); //小中勾
-  h = getKeccou(kou, co); //欠勾
-  i = gen * (kou / co); //補玄
+  const a = getChukou(kou,co); //中勾
+  const b = (kou * kou)/gen; // 短玄
+  const c = (co * co) / gen; // 長玄
+  const d = (co * ((co * co) / gen)) / gen; //殳1
+  const e = getSyoco(kou, co); //殳2 小殳も同じ
+  const f = (kou * ((kou * kou) / gen)) / gen; // 小勾
+  const g = getSyochukou(kou,co); //小中勾
+  const h = getKeccou(kou, co); //欠勾
+  const i = gen * (kou / co); //補玄
 
   if (isNaN(grad)) {
     θ = (kou / co) * 100;
@@ -154,106 +168,104 @@ function calculation() {
   }
 
   // 殳の裏目
-  j = Math.sqrt(co * co + co * co);
+  const j = Math.sqrt(co * co + co * co);
   //隅勾配の勾
-  k = (kou * co) / j;
+  const k = (kou * co) / j;
 
   // 欠勾隅勾
-  l = (k * d) / co;
+  const l = (k * d) / co;
   //隅欠勾
-  m = getKeccou(k, co);
+  const m = getKeccou(k, co);
   // 隅小殳(仮称)
-  n = getSyoco(k, co);
+  const n = getSyoco(k, co);
   // 平垂木栓勾配
-  o = (h * n) / e;
+  const o = (h * n) / e;
   // 小短玄
-  p = ((kou-h)**2) /b; //( (勾‐欠勾) *  ) / 短玄
+  const p = ((kou-h)**2) /b; //( (勾‐欠勾) *  ) / 短玄
   // 平勾配欠勾～中勾
-  q = (h * (co-e)) / c; //(欠勾* (殳-小殳))/ 長玄
+  const q = (h * (co-e)) / c; //(欠勾* (殳-小殳))/ 長玄
 
   // 1
-  r = getKeccou(h, d);
+  const r = getKeccou(h, d);
   //2 
-  s = getSyoco(h,d);
+  const s = getSyoco(h,d);
   //3 
-  t = getSyochukou(h,d);
+  const t = getSyochukou(h,d);
 
   //半勾配
-  u = kou / 2;
+  const u = kou / 2;
   //隅勾配 (半勾配*裏目) /co
-  v = (u*j)/co;
+  const v = (u*j)/co;
 
   // 隅中勾
-  w = getChukou(k,co);
+  const w = getChukou(k,co);
   // 隅中勾2
-  x = getChukou(kou,j);
+  const x = getChukou(kou,j);
   
   // 隅投長玄
-  y = Math.sqrt((l**2) + ((co-e)**2));
+  const y = Math.sqrt((l**2) + ((co-e)**2));
 
   //隅玄1
-  z = Math.sqrt(k * k + co * co);
+  const z = Math.sqrt(k * k + co * co);
   
   // 隅長玄1
-  aa =  (co * co) / z; 
+  const aa =  (co * co) / z; 
   // 隅玄2
-  ab = Math.sqrt(v * v + j * j);
+  const ab = Math.sqrt(v * v + j * j);
   // 隅長玄2
-  ac = (j * j) / ab; 
+  const ac = (j * j) / ab; 
   
   //平垂木栓勾配 (隅勾配図2)
-  ag = getTaruki(kou,co);
+  const ag = getTaruki(kou,co);
   //
 
   //投勾配
   // 殳 * 勾裏目の角度
-  ak = calculateAngle(co,((kou*j)/co));
+  const ak = calculateAngle(co,((kou*j)/co));
   // 隅勾 * 裏目殳の角度
-  al = calculateAngle(co,k);
-  an = ak-al;
-  am = calculateHeight(co,an);
-  
-  decimalPlaces = 8
-
-  var myTable = document.getElementById("table_koucogen");
-  myTable.rows[0].cells[1].textContent = kou.toFixed(decimalPlaces);  // 隅勾配
-  myTable.rows[1].cells[1].textContent = co.toFixed(decimalPlaces);
-  myTable.rows[2].cells[1].textContent = gen.toFixed(decimalPlaces);
-  myTable.rows[3].cells[1].textContent = i.toFixed(decimalPlaces); //中勾
-  myTable.rows[4].cells[1].textContent = c.toFixed(decimalPlaces); //長玄
-  myTable.rows[5].cells[1].textContent = b.toFixed(decimalPlaces); //短玄
-  myTable.rows[6].cells[1].textContent = (b/2).toFixed(decimalPlaces); //短玄の2分の1
-  myTable.rows[7].cells[1].textContent = d.toFixed(decimalPlaces); //殳1
-  myTable.rows[8].cells[1].textContent = e.toFixed(decimalPlaces); //小殳
-  myTable.rows[9].cells[1].textContent = f.toFixed(decimalPlaces); //小勾
-  myTable.rows[10].cells[1].textContent = g.toFixed(decimalPlaces); //小中勾
-  myTable.rows[11].cells[1].textContent = h.toFixed(decimalPlaces); //欠勾
-  myTable.rows[12].cells[1].textContent = p.toFixed(decimalPlaces); //小短玄
-  myTable.rows[13].cells[1].textContent = q.toFixed(decimalPlaces); //平勾配欠勾～中勾
-  myTable.rows[14].cells[1].textContent = r.toFixed(decimalPlaces); //1
-  myTable.rows[15].cells[1].textContent = s.toFixed(decimalPlaces); //2
-  myTable.rows[16].cells[1].textContent = t.toFixed(decimalPlaces); //3
-  myTable.rows[17].cells[1].textContent = i.toFixed(decimalPlaces); //補玄
-  myTable.rows[18].cells[1].textContent = θ.toFixed(decimalPlaces)+ " /100"; //勾配
+  const al = calculateAngle(co,k);
+  const an = ak-al;
+  const am = calculateHeight(co,an);
+  const decimalPlaces = 8;
+  let myTable = document.getElementById("table_koucogen");
+  myTable.rows[0].cells[1].textContent = truncateToDigits(kou);  // 隅勾配
+  myTable.rows[1].cells[1].textContent = truncateToDigits(co);  
+  myTable.rows[2].cells[1].textContent = truncateToDigits(gen);
+  myTable.rows[3].cells[1].textContent = truncateToDigits(a); //中勾
+  myTable.rows[4].cells[1].textContent = truncateToDigits(c); //長玄
+  myTable.rows[5].cells[1].textContent = truncateToDigits(b); //短玄
+  myTable.rows[6].cells[1].textContent = truncateToDigits((b/2)); //短玄の2分の1
+  myTable.rows[7].cells[1].textContent = truncateToDigits(d); //殳1
+  myTable.rows[8].cells[1].textContent = truncateToDigits(getSyoco(kou, co)); //小殳
+  myTable.rows[9].cells[1].textContent = truncateToDigits(f); //小勾
+  myTable.rows[10].cells[1].textContent = truncateToDigits(g); //小中勾
+  myTable.rows[11].cells[1].textContent = truncateToDigits(h); //欠勾
+  myTable.rows[12].cells[1].textContent = truncateToDigits(p); //小短玄
+  myTable.rows[13].cells[1].textContent = truncateToDigits(q); //平勾配欠勾～中勾
+  myTable.rows[14].cells[1].textContent = truncateToDigits(r); //1
+  myTable.rows[15].cells[1].textContent = truncateToDigits(s); //2
+  myTable.rows[16].cells[1].textContent = truncateToDigits(t); //3
+  myTable.rows[17].cells[1].textContent = truncateToDigits(i); //補玄
+  myTable.rows[18].cells[1].textContent = truncateToDigits(θ).toString() + " /100"; //勾配
 
   myTable = document.getElementById("table_sumikoubai1");
-  myTable.rows[0].cells[1].textContent = v.toFixed(decimalPlaces) + "/100";  //隅勾配
-  myTable.rows[1].cells[1].textContent = k.toFixed(decimalPlaces); //隅勾
-  myTable.rows[2].cells[1].textContent = l.toFixed(decimalPlaces);  //欠勾隅勾
-  myTable.rows[3].cells[1].textContent = m.toFixed(decimalPlaces); //隅欠勾
-  myTable.rows[4].cells[1].textContent = w.toFixed(decimalPlaces); //隅中勾
-  myTable.rows[5].cells[1].textContent = x.toFixed(decimalPlaces); //隅中勾2
-  myTable.rows[6].cells[1].textContent = y.toFixed(decimalPlaces); //隅投長玄
-  myTable.rows[7].cells[1].textContent = ag.toFixed(decimalPlaces); //平垂木栓勾配
-  myTable.rows[8].cells[1].textContent = u.toFixed(decimalPlaces); //半勾配
+  myTable.rows[0].cells[1].textContent = truncateToDigits(v).toString() + "/100";  //隅勾配
+  myTable.rows[1].cells[1].textContent = truncateToDigits(k); //隅勾
+  myTable.rows[2].cells[1].textContent = truncateToDigits(l);  //欠勾隅勾
+  myTable.rows[3].cells[1].textContent = truncateToDigits(m); //隅欠勾
+  myTable.rows[4].cells[1].textContent = truncateToDigits(w); //隅中勾
+  myTable.rows[5].cells[1].textContent = truncateToDigits(x); //隅中勾2
+  myTable.rows[6].cells[1].textContent = truncateToDigits(y); //隅投長玄
+  myTable.rows[7].cells[1].textContent = truncateToDigits(ag); //平垂木栓勾配
+  myTable.rows[8].cells[1].textContent = truncateToDigits(u); //半勾配
 
   myTable = document.getElementById("table_sumikoubai2");
-  myTable.rows[0].cells[1].textContent = aa.toFixed(decimalPlaces);  //隅長玄1
-  myTable.rows[1].cells[1].textContent = ac.toFixed(decimalPlaces); //隅長玄2
-  myTable.rows[2].cells[1].textContent = z.toFixed(decimalPlaces);  //隅玄1
-  myTable.rows[3].cells[1].textContent = ab.toFixed(decimalPlaces); //隅玄2
-  myTable.rows[4].cells[1].textContent = am.toFixed(decimalPlaces); //投勾配
-  myTable.rows[5].cells[1].textContent = w.toFixed(decimalPlaces); //隅中勾
-  myTable.rows[6].cells[1].textContent = x.toFixed(decimalPlaces); //隅中勾2
-  myTable.rows[7].cells[1].textContent = o.toFixed(decimalPlaces); //平垂木栓勾配
+  myTable.rows[0].cells[1].textContent = truncateToDigits(aa);  //隅長玄1
+  myTable.rows[1].cells[1].textContent = truncateToDigits(ac); //隅長玄2
+  myTable.rows[2].cells[1].textContent = truncateToDigits(z);  //隅玄1
+  myTable.rows[3].cells[1].textContent = truncateToDigits(ab); //隅玄2
+  myTable.rows[4].cells[1].textContent = truncateToDigits(am); //投勾配
+  myTable.rows[5].cells[1].textContent = truncateToDigits(w); //隅中勾
+  myTable.rows[6].cells[1].textContent = truncateToDigits(x); //隅中勾2
+  myTable.rows[7].cells[1].textContent = truncateToDigits(o); //平垂木栓勾配
 }
