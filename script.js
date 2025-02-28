@@ -63,8 +63,8 @@ export class Koucogen {
    * 
    * @returns { number } 中勾の数値
    */
-  getChukou() {
-    return (this.kou * this.co) / this.gen;
+  getChukou(kou = this.kou, co = this.co , gen = this.gen) {
+    return (kou * co) / gen;
   }
 
   /**
@@ -100,14 +100,15 @@ export class Koucogen {
    * @returns { number } 欠勾の数値
    */
   getKeccou(kou = this.kou, gen = this.gen) {
-    return kou - ((kou * (Math.pow(kou,2) / gen)) / gen);
+    // 欠勾 = 勾 - 小勾
+    return kou - this.getSyoukou(kou,gen);
   }
 
   /**
    * 垂木栓勾配の計算
    * @returns { number } 垂木栓勾配の数値
    */
-  getTaruki() {
+  getTaruki1() {
     let A = Math.sqrt(this.kou * this.kou + this.co * this.co);
     let S1 = (this.kou * this.co * (1 / 2)) - (this.kou * (this.co / 2) * (1 / 2));
     let B = (S1 * 2) / A;
@@ -120,16 +121,16 @@ export class Koucogen {
    * 短玄の数値を取得
    * @returns { number } 短玄の数値
    */
-  getTangen(){
-    return Math.pow(this.kou,2) / this.gen; // 短玄
+  getTangen(kou =this.kou, gen = this.gen){
+    return Math.pow(kou,2) / gen; // 短玄
   }
 
   /**
    * 長玄の数値を取得
    * @returns { number } 長玄の数値
    */
-  getChougen(){
-    return Math.pow(this.co,2) / this.gen; // 長玄
+  getChougen(co= this.co , gen = this.gen){
+    return Math.pow(co,2) / gen; // 長玄
   }
 
   /**
@@ -144,8 +145,8 @@ export class Koucogen {
    * 小勾
    * @returns { number } 小勾の数値
    */
-  getSyoukou(){
-    return (this.kou * ((Math.pow(this.kou,2) ) / this.gen)) / this.gen;
+  getSyoukou(kou = this.kou, gen = this.gen){
+    return (kou * ((Math.pow(kou,2) ) / gen)) / gen;
   }
 
 
@@ -167,11 +168,11 @@ export class Koucogen {
   }
 
   /**
-   * 隅勾配の勾の数値を取得
-   * @returns { number } 隅勾配の勾の数値
+   * 裏目勾の数値を取得
+   * @returns { number } 裏目勾の数値
    */
-  getSumikoubaiKou(){
-    return (this.kou * this.co) / this.getCoUraMe();
+  getKouUraMe(){
+    return this.kou * Math.sqrt(2); 
   }
 
   /**
@@ -179,7 +180,7 @@ export class Koucogen {
    * @returns { number } 欠勾隅勾の数値
    */
   getkeccouSumikou(){
-    return (this.getSumikoubaiKou() * this.getCo1()) / this.co;
+    return (this.getSumikou() * this.getCo1()) / this.co;
   }
 
   /**
@@ -187,7 +188,7 @@ export class Koucogen {
    * @returns { number } 隅欠勾の数値
    */
   getSumiKeccou(){
-    return this.getKeccou(this.getSumikoubaiKou(), this.co);
+    return this.getKeccou(this.getSumikou(), this.getSumiGen1());
   }
 
   /**
@@ -195,7 +196,7 @@ export class Koucogen {
    * @returns { number } 隅小殳(仮称)の数値
    */
   getSumiSyoco(){
-    return this.getSyoco(this.getSumikoubaiKou(), this.co);
+    return this.getSyoco(this.getSumikou(), this.co);
   }
 
   /**
@@ -219,7 +220,8 @@ export class Koucogen {
    * @returns { number } 平勾配欠勾～中勾の数値
    */
   getHirakoubaiKeccouChukou(){
-    return (this.getKeccou() * (this.co - this.getSyoco())) / this.getChougen();
+    // return (this.getKeccou() * (this.co - this.getSyoco())) / this.getChougen();
+    return (this.getChukou()*this.getCo1())/this.getCo();
   }
 
   /**
@@ -260,7 +262,15 @@ export class Koucogen {
    * @returns { number } 隅勾配の数値
    */
   getSumikoubai(){
-    return (this.getHankoubai()*this.getCoUraMe()) / this.co;
+    return (this.getSumikou() / this.getCoUraMe()) * 100;
+  }
+
+  /**
+   * 隅勾の数値を取得
+   * @returns { number } 隅勾の数値
+   */
+  getSumikou(){
+    return (this.kou * this.co) / this.getCoUraMe();
   }
 
   /**
@@ -268,7 +278,7 @@ export class Koucogen {
    * @returns { number } 隅中勾の数値
    */
   getSumiChukou() {
-    return getChukou(this.getSumikoubaiKou(), this.co);
+    return this.getChukou(this.getSumikou(), this.co, this.getSumiGen1());
   }
 
   /**
@@ -276,7 +286,7 @@ export class Koucogen {
    * @returns { number } 隅中勾2の数値
    */
   getSumiChukou2() {
-    return getChukou(this.kou, this.getCoUraMe());
+    return this.getChukou(this.kou,this.getCoUraMe(),this.getSumiGen2());
   }
 
   /**
@@ -284,7 +294,7 @@ export class Koucogen {
    * @returns { number } 隅投長玄の数値
    */
   getSumiToChougen(){
-    return Math.sqrt(Math.pow(this.getSumiKeccou(), 2) + Math.pow((this.co - this.getSyoco()), 2));
+    return Math.sqrt(Math.pow(this.getkeccouSumikou(), 2) + Math.pow(this.getCo1() ,2));
   }
 
   /**
@@ -292,7 +302,7 @@ export class Koucogen {
    * @returns { number } 隅玄1の数値
    */
   getSumiGen1(){
-    return Math.sqrt(Math.pow(this.getSumikoubaiKou(), 2) + Math.pow(this.co, 2));
+    return Math.sqrt(Math.pow(this.getSumikou(), 2) + Math.pow(this.co, 2));
   }
 
   /**
@@ -308,7 +318,7 @@ export class Koucogen {
    * @returns { number } 隅玄2の数値
    */
   getSumiGen2(){
-    return Math.sqrt(Math.pow(this.getSumikoubai(), 2) + Math.pow(this.getCoUraMe(), 2));
+    return Math.sqrt(Math.pow(this.kou, 2) + Math.pow(this.getCoUraMe(), 2));
   }
 
   /**
@@ -319,19 +329,23 @@ export class Koucogen {
     return Math.pow(this.getCoUraMe(), 2) / this.getSumiGen2();
   }
 
-  getHirataruki2(){
-    return getTaruki(this.kou, this.co);
+
+  /**
+   * 垂木栓勾配2の数値を取得
+   * @returns { number } 垂木栓勾配2の数値
+   */
+  getTaruki2(){
+    let sumisyouco = Math.sqrt(Math.pow(this.getSumiChukou(), 2) - Math.pow(this.getSumiKeccou(), 2));
+    return this.getKeccou()* sumisyouco/ this.getSyoco();
   }
 
   /**
    * 投勾配の数値を取得
+   * 欠勾隅勾と同じ
    * @returns { number } 投勾配の数値
    */  
   getToukoubai(){
-    let ak = this.calculateAngle(this.co, ((this.kou * this.getCoUraMe()) / this.co));
-    let al = this.calculateAngle(this.co, this.getSumikoubaiKou());
-    let an = ak - al;
-    return this.calculateHeight(this.co, an);
+    return this.getkeccouSumikou();
   }
 
   /**
@@ -411,11 +425,11 @@ export function calculation() {
     }
     if (nullCount === 1) {
       if (isNaN(kou)) {
-        kou = Math.sqrt(co * co + gen * gen);
+        kou = Math.sqrt(Math.pow(gen,2) -Math.pow(co,2));
         //document.getElementById('kou').value = kou;
       }
       if (isNaN(co)) {
-        co = Math.sqrt(kou * kou + gen * gen);
+        co = Math.sqrt(Math.pow(gen,2) - Math.pow(kou,2));
         //document.getElementById('co').value = co;
       }
       if (isNaN(gen)) {
@@ -559,29 +573,27 @@ export function calculation() {
 
   myTable = document.getElementById("table_sumikoubai1");
   myTable.rows[0].cells[1].textContent = truncateToDigits(calc.getSumikoubai()).toString() + "/100";  //隅勾配
-  myTable.rows[1].cells[1].textContent = truncateToDigits(calc.getSumikoubaiKou()); //隅勾
+  myTable.rows[1].cells[1].textContent = truncateToDigits(calc.getSumikou()); //隅勾
   myTable.rows[2].cells[1].textContent = truncateToDigits(calc.getkeccouSumikou());  //欠勾隅勾
   myTable.rows[3].cells[1].textContent = truncateToDigits(calc.getSumiKeccou()); //隅欠勾
-  // myTable.rows[4].cells[1].textContent = truncateToDigits(calc.getSumiChukou()); //隅中勾
-  // myTable.rows[5].cells[1].textContent = truncateToDigits(calc.getSumiChukou2()); //隅中勾2
-  myTable.rows[4].cells[1].textContent = "開発中"; //隅中勾
-  myTable.rows[5].cells[1].textContent = "開発中"; //隅中勾2
+  myTable.rows[4].cells[1].textContent = truncateToDigits(calc.getSumiChukou()); //隅中勾 
+  myTable.rows[5].cells[1].textContent = truncateToDigits(calc.getSumiChukou2()); //隅中勾2
   myTable.rows[6].cells[1].textContent = truncateToDigits(calc.getSumiToChougen()); //隅投長玄
   myTable.rows[7].cells[1].textContent = truncateToDigits(calc.getHirataruki()); //平垂木栓勾配
   myTable.rows[8].cells[1].textContent = truncateToDigits(calc.getHankoubai()); //半勾配
+  myTable.rows[9].cells[1].textContent = truncateToDigits(calc.getKou()); //半勾配
 
   myTable = document.getElementById("table_sumikoubai2");
   myTable.rows[0].cells[1].textContent = truncateToDigits(calc.getSumiChougen());  //隅長玄1
   myTable.rows[1].cells[1].textContent = truncateToDigits(calc.getSumiChougen2()); //隅長玄2
   myTable.rows[2].cells[1].textContent = truncateToDigits(calc.getSumiGen1());  //隅玄1
   myTable.rows[3].cells[1].textContent = truncateToDigits(calc.getSumiGen2()); //隅玄2
-  // myTable.rows[4].cells[1].textContent = truncateToDigits(calc.getToukoubai()); //投勾配
-  // myTable.rows[5].cells[1].textContent = truncateToDigits(calc.getSumiChukou()); //隅中勾
-  // myTable.rows[6].cells[1].textContent = truncateToDigits(calc.getSumiChukou2()); //隅中勾2
-  // myTable.rows[7].cells[1].textContent = truncateToDigits(calc.getHirataruki2()); //平垂木栓勾配
-  
-  myTable.rows[4].cells[1].textContent = "開発中"; //投勾配
-  myTable.rows[5].cells[1].textContent = "開発中"; //隅中勾
-  myTable.rows[6].cells[1].textContent = "開発中"; //隅中勾2
-  myTable.rows[7].cells[1].textContent = "開発中"; //平垂木栓勾配
+  myTable.rows[4].cells[1].textContent = truncateToDigits(calc.getToukoubai()); //投勾配
+  myTable.rows[5].cells[1].textContent = truncateToDigits(calc.getSumiChukou()); //隅中勾
+  myTable.rows[6].cells[1].textContent = truncateToDigits(calc.getSumiChukou2()); //隅中勾2
+  myTable.rows[7].cells[1].textContent = truncateToDigits(calc.getTaruki2()); //垂木栓勾配
+  myTable.rows[8].cells[1].textContent = truncateToDigits(calc.getKouUraMe()); //裏目勾
+  myTable.rows[9].cells[1].textContent = truncateToDigits(calc.getCoUraMe()); //裏目殳
+  myTable.rows[10].cells[1].textContent = truncateToDigits(calc.getSumiKeccou()); //隅欠勾
+  myTable.rows[11].cells[1].textContent = truncateToDigits(calc.getkeccouSumikou()); // 欠勾隅勾
 }
