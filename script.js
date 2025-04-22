@@ -395,6 +395,14 @@ export class Koucogen {
  * @returns { number } 切り捨てた数値
  */
 export function truncateToDigits(num) {
+  const tolerance = 1e-9; // 許容誤差
+  if (Math.ceil(num) - num < tolerance) {
+    return Math.ceil(num); // 次の整数に繰り上げる
+  } else {
+    // 通常の小数点8桁切り捨て処理
+    num = Math.floor(num * 100000000) / 100000000;
+  }
+
   let decimalPlaces = 8;
   // 8桁目までを残すために10の7乗をかける
   let Digits = Math.pow(10, decimalPlaces);
