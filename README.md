@@ -14,3 +14,16 @@
 適切なアトリビュートなしで 本サービスの一部を再配布する。  
 # 使用しているライブラリのLICENSE
 https://github.com/twbs/bootstrap/blob/v5.0.2/LICENSE
+
+# Dev
+## 自動テスト
+### インストール
+```
+winget install OpenJS.NodeJS 
+npm install -D vitest
+```
+
+### テスト実行
+``` console
+npm run test
+```

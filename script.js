@@ -262,7 +262,7 @@ export class Koucogen {
    * @returns { number } 隅勾配の数値
    */
   getSumikoubai(){
-    return (this.getSumikou() / this.getCoUraMe()) * 100;
+    return (this.getKou() / this.getCoUraMe()) * 100;
   }
 
   /**
