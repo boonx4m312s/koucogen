@@ -399,8 +399,7 @@ export function truncateToDigits(num) {
   if (Math.ceil(num) - num < tolerance) {
     return Math.ceil(num); // 次の整数に繰り上げる
   } else {
-    // 通常の小数点8桁切り捨て処理
-    num = Math.floor(num * 100000000) / 100000000;
+    num = num.toFixed(8); // 小数点以下8桁に変換
   }
 
   let decimalPlaces = 8;
