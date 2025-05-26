@@ -586,7 +586,7 @@ export function calculation() {
   myTable.rows[4].cells[1].textContent = truncateToDigits(calc.getSumiChukou()); //隅中勾 
   myTable.rows[5].cells[1].textContent = truncateToDigits(calc.getSumiChukou2()); //隅中勾2
   myTable.rows[6].cells[1].textContent = truncateToDigits(calc.getSumiToChougen()); //隅投長玄
-  myTable.rows[7].cells[1].textContent = truncateToDigits(calc.getHirataruki()); //平垂木栓勾配
+  myTable.rows[7].cells[1].textContent = truncateToDigits(calc.getTaruki1()); //平垂木栓勾配
   myTable.rows[8].cells[1].textContent = truncateToDigits(calc.getHankoubai()); //半勾配
   myTable.rows[9].cells[1].textContent = truncateToDigits(calc.getKou()); //半勾配
 
